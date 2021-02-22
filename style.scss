@@ -1,0 +1,120 @@
+//variables
+$box-shadow1 : inset 0 32px 32px -32px rgb(246, 241, 255),
+              inset 0 -32px 32px -32px rgb(246, 241, 255);
+$box-shadow2: 0 0 32px rgba(0, 0, 0, 0.08),
+                0 16px 16px -16px rgba(0,0,0,0.1);
+
+
+.chat-area{
+   
+    header{
+        display: flex;
+        align-items: center;
+        padding: 18px 30px;
+        
+        img{
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+        }
+        span{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        p{
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+    }
+}
+.chat-place{
+    overflow-y: auto;
+    height: 500px;
+    background: #f7f7f7;
+    padding: 10px 30px 20px 30px;
+    max-width: 420px;
+    box-shadow: $box-shadow1;
+    border-radius: 0 0 5px 5px;
+    .chat{
+        margin:15px 0;
+        word-wrap: break-word;
+        p{
+            padding: 8px 16px;
+            box-shadow: $box-shadow2;
+           
+        }
+    }
+    .chat-send{
+        display: flex;
+        .details{
+            margin-left: auto;
+            max-width: calc(100% - 60px);
+            p{
+                background: #333;
+                color:#fff;
+                font-size: 14px;
+                border-radius: 16px 16px 0px 16px;
+            }
+        }
+    }
+    .chat-receive{
+        display: flex;
+        align-items: flex-end;
+        img{
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+        }
+        .details{
+            margin-left: 10px;
+            margin-right: auto;
+            max-width: calc(100% - 60px);
+           
+            p{
+                background: #fff;
+                color: #333;
+                font-size: 14px;
+                border-radius: 16px 16px 16px 0px; 
+            }
+        }
+    }
+
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+ 
+}
+   
+.form-type{
+    display: flex;
+    padding: 18px 30px;
+    justify-content: space-between;
+    input{
+        height: 40px;
+        width: 100%;
+        border-radius: 7px 0 0 7px;
+        outline: none;
+        border: 1px solid #ccc;
+        padding-left: 10px;
+        font-size: 16px;
+    }
+    .send{
+    background-color: rgb(85, 84, 84);
+  height: 40px;
+  padding-left:4px ;
+  padding-right: 4px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  color: white;
+  border-radius: 0px 7px 7px 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease-in;
+  z-index: 2; 
+  &:hover{
+    background-color: rgb(48, 48, 48);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0,0.5); 
+  }
+    }
+}
